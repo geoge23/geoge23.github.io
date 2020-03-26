@@ -1,0 +1,231 @@
+body {
+    font-family: 'Montserrat';
+    background-color: black;
+    color: white;
+}
+
+.head p {
+    font-size: 30px;
+    margin-top: -2.5rem;
+    margin-left: 5vh;
+    margin-bottom: 2vh;
+}
+
+.head h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 0.4vw;
+    font-weight: 400;
+    margin-left: 5vh;
+    color: yellow;
+}
+
+.socials {
+    margin-left: 5vh;
+    display: inline;
+}
+
+.socials a {
+    color: white;
+    text-decoration: none;
+    transition: 500ms ease;
+    margin-right: 15px;
+    font-size: 2em;
+}
+
+.socials a:hover {
+    color: yellow;
+    font-size: 2.3em;
+    margin-top: -0.2vh;
+}
+
+
+#scrolldown {
+    position: absolute;
+    bottom: 3vh;
+    font-size: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    color: white;
+    text-decoration: false;
+    transition: 500ms ease;
+}
+
+#scrolldown:hover {
+    color: yellow;
+    font-size: 35px;
+    width: 35px;
+}
+
+ul {
+    font-size: 22px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+span {
+    color: lightgrey;
+}
+
+.head {
+    background-image: url(/background.jpg);
+    background-size: cover;
+}
+
+.cards {
+    margin-left: 20vh;
+    margin-right: 20vh;
+    
+}
+
+.card {
+    margin-left: 3vh;
+    background-color: rgb(43, 43, 43);
+    box-shadow: grey;
+}
+
+.card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.card .top {
+    height: 100%;
+    width: 100%;
+}
+
+.card button {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(24, 24, 24);
+    border: 0px none;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.01vw;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.card:hover button {
+    background-color: #ffd600;
+    color: black;
+}
+
+.card p, h4 {
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.navcontrols {
+    font-size: 40px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    bottom: -5%;
+    margin-left: -60px;
+    margin-right: -60px;
+}
+
+.navcontrols a {
+    margin-right: 40px;
+    cursor: pointer;
+    color: yellow
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    color: yellow;
+}
+
+.me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.me .metext {
+    grid-area: 1 / 1 / 2 / 2;
+    padding-left: 10vh;
+}
+
+.me .meimage {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.me .meimage img {
+    height: 75vh;
+}
+
+@media (max-width: 1024px) {
+    .cards {
+        margin-left: 4vh;
+        margin-right: 6.5vh;
+    }
+    .head h1 {
+        font-size: 50px;
+    }
+    .head p {
+        font-size: 25px;
+        margin-top: -2.5rem;
+        margin-left: 5vh;
+        margin-bottom: 2vh;
+    }
+    .navcontrols {
+        display: none;
+    }
+    .card:hover button {
+        background-color: rgb(24, 24, 24);
+        color: white;
+    }
+    .card button:active {
+        background-color: #ffd600;
+        color: black;
+    }
+    .me {
+        margin-left: 0vh;
+        margin-right: 0vh;
+        text-align: left;
+        width: 100vh;
+    }
+    .me img {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+    .me .metext {
+        grid-area: 1 / 1 / 2 / 2;
+        padding-left: 2vh;
+    }
+    .me ul {
+        list-style-type: none;
+        font-size: 12px;
+    }
+    .me .title {
+        display: none;
+    }
+ }
+ @media (min-width: 2500px) {
+    .cards {
+        margin-left: 30vh;
+        margin-right: 30vh;
+        
+    }
+    .navcontrols {
+        display: inline;
+    }
+ }

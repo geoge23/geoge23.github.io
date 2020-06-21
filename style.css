@@ -304,14 +304,16 @@ a.phonenumber {
 
     .projectholder {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .projectcard {
         margin: 0;
         margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .projectcard:nth-child(n+4) {

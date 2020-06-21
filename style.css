@@ -1,0 +1,382 @@
+:root {
+    scroll-behavior: smooth;
+    font-family: Montserrat !important;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.cta {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    outline: 10px solid white;
+    outline-offset: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.center .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cta .middle {
+    display: flex;
+    align-items: center;
+}
+
+.cta .middle .type {
+    margin-left: 0.5em;
+    min-width: 25vw;
+    font-size: 5vh;
+}
+
+.cta .middle img {
+    height: 10vh;
+    width: 10vh;
+}
+
+.nav a {
+    color: black;
+    display: block;
+    margin: 16px;
+}
+
+.nav a:hover {
+    transition: 500ms ease;
+    color: rgb(37, 37, 37);
+    cursor: pointer;
+}
+
+.slide {
+    margin: 0 5vw;
+    padding: 3vh 0;
+}
+
+.slide h1 {
+    font-weight: 600;
+}
+
+.slide.with-img .holder {
+    display: flex;
+    flex-direction: row;
+}
+
+.slide.with-img .holder img {
+    width: 30%;
+    max-height: 40vh;
+    object-fit: contain;
+}
+
+.slide.with-img .holder p {
+    width: 70%;
+    font-size: 2.5vh;
+}
+
+.slide.services .body {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.servicecard {
+    min-width: 25%;
+    width: 25%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.servicecard p.top {
+    color: rgb(9, 49, 61);
+    width: 100%;
+    font-size: 0.90em;
+    min-height: 1em;
+    margin-top: 1vh;
+}
+
+.servicecard p.bottom {
+    width: 100%;
+}
+
+.projectcard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 25vh;
+    width: 25vh;
+    outline: 8px solid black;
+    transition: 1s ease;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.projectcard img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    filter: grayscale(1) brightness(0.8);  
+    transition: 250ms ease;
+}
+
+.projectcard .caption {
+    position: absolute;
+    bottom: 1vh;
+    left: 0.4vw;
+    color: white;
+    font-size: 1.8vh;
+    backdrop-filter: grayscale(0);
+    background-color: rgb(144, 163, 179);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 10px;
+    width: 100%;
+    transition: 500ms ease;
+}
+
+.projectcard .caption p.top {
+    font-weight: 500;
+    margin: 0;
+}
+
+.projectcard .caption p.bottom {
+    font-weight: 300;
+    margin: 0;
+}
+
+.projectcard:hover .caption {
+    opacity: 0;
+}
+
+.projectcard:hover img {
+    filter: grayscale(0) brightness(1);  
+}
+
+.projectholder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: none;
+}
+
+span.seemore {
+    font-weight: 400;
+    font-size: 2vh;
+    color: rgb(144, 163, 179);
+}
+
+.referencecard {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.referencecard .name img {
+    height: 4vw;
+    border-radius: 100%;
+}
+
+.referencecard .name  {
+    display: flex;
+    align-items: center;
+}
+
+.referencecard .name p {
+    margin-left: 1rem;
+    font-size: 3vh;
+}
+
+.referencecard .name span {
+    font-weight: 300;
+}
+
+.referenceholder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: none;
+}
+
+.pageclip-form input {
+    width: 20vw;
+}
+
+.pageclip-form textarea {
+    width: 30vw;
+}
+
+.pageclip-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.formholder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px 0;
+}
+
+.pageclip-form button {
+    width: 20%;
+}
+
+a.phonenumber {
+    font-weight: 600;
+    font-size: 3vh;
+    margin: 0;
+    color: rgb(144, 163, 179);
+}
+
+
+@media (max-width: 900px) {
+    .referencecard {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        margin: 0 5vw;
+    }
+
+    .pageclip-form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    
+    .pageclip-form input {
+        width: 50vw;
+    }
+    
+    .pageclip-form textarea {
+        width: 60vw;
+    }
+
+    .pageclip-form button {
+        width: 80%;
+    }
+
+    .referencecard {
+        width: 100%;
+    }
+
+    .referencecard .name {
+        margin-bottom: -2vh;
+    }
+
+    .referencecard .name img {
+        height: 15vw;
+        border-radius: 100%;
+    }
+
+    .referenceholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: none;
+    }
+
+    span.seemore {
+        font-weight: 400;
+        font-size: 2vh;
+        color: rgb(144, 163, 179);
+        display: block;
+    }
+
+    .projectholder {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .projectcard {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .projectcard:nth-child(n+4) {
+        display: none;
+    }
+
+    .cta {
+        outline: none;
+    }
+
+    .cta .middle {
+        flex-direction: column;
+        font-size: 3vh;
+    }
+
+    .cta .middle .type {
+        font-size: 4vh;
+    }
+
+    .cta .middle img {
+        margin-bottom: 1vh;
+    }
+
+    .nav {
+        margin-top: 3vh;
+    }
+
+    .slide {
+        margin: 0 1vw;
+        padding: 3vh 0;
+    }
+
+    .slide h1 {
+        text-align: center;
+    }
+
+    .slide.with-img .holder {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .slide.with-img .holder img {
+        height: 20vh;
+        width: 100%;
+    }
+
+    .mobile-cut {
+        display: none;
+    }
+
+    .servicecard {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

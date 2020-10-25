@@ -227,12 +227,16 @@ li>p {
         padding: 0 5vw;
         font-size: 2.5ch;
     }
+    .label>.subtext {
+        font-size: 2.2vh;
+    }
 }
 
 @media screen and (max-width: 760px) {
     .lists {
         flex-direction: column;
         padding: 0;
+        height: auto;
     }
 
     .list {
@@ -241,5 +245,26 @@ li>p {
 
     body, html {
         overflow-y: scroll;
+    }
+
+    .text {
+        padding: 2.5vw;
+        margin-bottom: 0;
+        font-size: 2ch;
+    }
+
+    .footer {
+        position: static;
+        color: #575757;
+        font-size: 2.3vh;
+        margin-bottom: 2vh;
+    }
+
+    .title {
+        margin-left: 2vh;
+    }
+
+    .text-article>p {
+        margin: 0 2vh;
     }
 }

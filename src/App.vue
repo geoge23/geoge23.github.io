@@ -63,4 +63,12 @@ body {
 .hover-effect:hover::after {
   width: 100%;
 }
+.read-more {
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
 </style>

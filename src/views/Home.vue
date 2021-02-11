@@ -56,6 +56,7 @@ img {
 }
 .menu-item {
   text-transform: uppercase;
+  cursor: pointer;
 }
 .menu {
   margin: 0;
@@ -88,6 +89,15 @@ img {
   margin: 0.25rem;
   font-size: 1.2rem;
   z-index: 2;
+}
+
+@media screen and (min-width: 1300px) {
+    .desc>h1 {
+      font-size: 3rem;
+    }
+    .desc>p {
+      font-size: 1.8rem;
+    }
 }
 
 @media screen and (max-width: 950px) {

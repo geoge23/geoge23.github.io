@@ -9,7 +9,10 @@
           <p class="read-more">Read More</p>
       </div>
       <div class="tech">
-
+          <div class="item">
+              <ion-icon v-tooltip="'test'" name="logo-docker"></ion-icon>
+              <ion-icon name="logo-nodejs"></ion-icon>
+          </div>
       </div>
   </div>
 </template>
@@ -30,6 +33,7 @@ export default {
     display: flex;
     border-radius: 20px;
     position: relative;
+    margin-bottom: 2vh;
 }
 
 .text {
@@ -72,5 +76,12 @@ h2 {
 
 .image, svg {
     height: 6vh
+}
+
+.tech {
+    position: absolute;
+    right: 1vw;
+    display: flex;
+    flex-direction: column;
 }
 </style>

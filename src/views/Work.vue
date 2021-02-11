@@ -32,7 +32,13 @@
         </svg>
         </template>
       </entry>
+      <entry>
+        <template v-slot:img>
+          <img src="@/assets/logo.png" alt="" class="image">
+        </template>
+      </entry>
     </div>
+    <stripe />
   </div>
 </template>
 
@@ -40,11 +46,13 @@
 import Entry from '../components/Entry.vue'
 import RecommendationCard from '../components/RecommendationCard.vue'
 import Scroller from '../components/Scroller.vue'
+import Stripe from '../components/Stripe.vue'
 export default {
   components: {
     RecommendationCard,
     Scroller,
-    Entry
+    Entry,
+    Stripe
   }
 }
 </script>

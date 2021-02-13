@@ -5,9 +5,9 @@
       <h1><span class="hey-im">Hey 👋, I’m </span><span class="highlight">George Parks</span></h1>
       <p>An Atlanta-based <span class="underline">freelance software engineer</span> and <span class="underline">web designer</span> with a passion for innovative technologies and solutions.</p>
       <div class="menu">
-        <p class="menu-item hover-effect">See my work</p>
+        <p class="menu-item hover-effect" @click="() => $router.push('/work')">See my work</p>
         <p class="divider">•</p>
-        <p class="menu-item hover-effect">Get in touch</p>
+        <p class="menu-item hover-effect" @click="() => $router.push('/contact')">Get in touch</p>
       </div>
     </div>
     <div class="photo-holder">

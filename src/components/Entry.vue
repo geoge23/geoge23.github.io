@@ -10,8 +10,8 @@
       </div>
       <div class="tech">
           <div class="item">
-              <ion-icon v-tooltip="'test'" name="logo-docker"></ion-icon>
-              <ion-icon name="logo-nodejs"></ion-icon>
+              <ion-icon v-tooltip="'Docker'" name="logo-docker"></ion-icon>
+              <ion-icon v-tooltip="'NodeJS'" name="logo-nodejs"></ion-icon>
           </div>
       </div>
   </div>
@@ -26,6 +26,7 @@ export default {
 <style scoped>
 .entry {
     width: 40vw;
+    max-width: 600px;
     height: 15vh;
     padding: 1vh;
     box-shadow: rgba(0, 0, 0, 0.212) 10px 10px 99px;
@@ -69,6 +70,10 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    margin-bottom: 0.8vh;
+}
+
 
 .read-more {
     margin: 0.3vh;
@@ -83,5 +88,11 @@ h2 {
     right: 1vw;
     display: flex;
     flex-direction: column;
+}
+
+ion-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.5rem;
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="main-scroll">
       <h2>References</h2>
       <recommendation-card />
-      <scroller :total="5" :selected="0" />
+      <scroller :total="5" :selected="3" />
       <h2>Projects</h2>
       <entry>
         <template v-slot:img>
@@ -37,7 +37,23 @@
           <img src="@/assets/logo.png" alt="" class="image">
         </template>
       </entry>
+      <entry>
+        <template v-slot:img>
+          <img src="@/assets/logo.png" alt="" class="image">
+        </template>
+      </entry>
+      <entry>
+        <template v-slot:img>
+          <img src="@/assets/logo.png" alt="" class="image">
+        </template>
+      </entry>
+      <entry>
+        <template v-slot:img>
+          <img src="@/assets/logo.png" alt="" class="image">
+        </template>
+      </entry>
     </div>
+    <sidebar />
     <stripe />
   </div>
 </template>
@@ -46,13 +62,15 @@
 import Entry from '../components/Entry.vue'
 import RecommendationCard from '../components/RecommendationCard.vue'
 import Scroller from '../components/Scroller.vue'
+import Sidebar from '../components/Sidebar.vue'
 import Stripe from '../components/Stripe.vue'
 export default {
   components: {
     RecommendationCard,
     Scroller,
     Entry,
-    Stripe
+    Stripe,
+    Sidebar
   }
 }
 </script>
@@ -62,8 +80,12 @@ export default {
   display: flex;
   justify-self: center;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
 }
 
 h2 {

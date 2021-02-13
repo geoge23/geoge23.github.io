@@ -17,12 +17,13 @@ export default {
 .reference {
     background-color: #D98544;
     border-radius: 20px;
-    max-width: 40vw;
+    width: 40vw;
     padding: 1vh;
     box-shadow: rgba(0, 0, 0, 0.288) 10px 10px 99px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    max-width: 600px;
 }
 
 .text {

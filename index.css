@@ -3,15 +3,57 @@
 body {
     margin: 0;
     font-family: 'Roboto';
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 37, 56);
+}
+
+header>p {
+    color: rgb(233, 233, 233);
+    text-transform: lowercase;
+    letter-spacing: 0.3ch;
+}
+
+header>p.divider {
+    margin: 10px;
 }
 
 .hero {
     background-color: rgba(26, 45, 69, 1);
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+#top-right {
+    width: 55.5vh;
+    height: 37vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#bottom-left {
+    width: 49.5vh;
+    height: 33vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .hero-text {
@@ -19,6 +61,7 @@ body {
     font-size: 45px;
     font-weight: 500;
     margin: 12px;
+    z-index: 5;
 }
 
 .hero>p {
@@ -27,6 +70,7 @@ body {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
+    z-index: 5;
 }
 
 .hero-text>span {
@@ -38,52 +82,105 @@ body {
     filter: invert(1);
 }
 
-.svg-curve {
+#blog {
+    padding: 0 25px;
+}
+
+#blog>h2 {
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(56, 56, 56);
+}
+
+.articles {
+    padding: 0 25px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 350px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+article>img {
+    width: 95%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.753);
+}
+
+article>.info {
+    margin-left: 12px;
+}
+
+.info>p.category {
+    margin-top: 10px;
+    margin-bottom: 7px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    width: auto;
     position: relative;
-    top: -2px;
-    height: 125px;
-    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(26, 45, 69, 1)" d="M 0 0 C 365.5 0 365.5 110 731 110 L 731 110 L 731 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(26, 45, 69, 1)" d="M 730 110 C 1085 110 1085 0 1440 0 L 1440 0 L 1440 0 L 730 0 Z" stroke-width="0"></path> </svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.svg-curve > p {
-    font-size: 15px;
-    letter-spacing: 0.3ch;
-    color: white;
     text-transform: uppercase;
+    letter-spacing: 0.3ch;
 }
 
-.svg-curve > svg {
-    margin-top: -10px;
-    color: white;
-    animation: flash 4s ease-in-out infinite;
+.info>p.category>span {
+    position: relative;
 }
 
-@keyframes flash {
-    0% {
-        color: #fff;
-        transform: translateY(-4px);
-    }
-
-    50% {
-        color: rgb(201, 201, 201);
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY(-4px);
-        color: #fff;
-    }
+.info>p.category>span::after {
+    content: "";
+    background-color: rgba(26, 45, 69, 0.363);
+    width: 90%;
+    height: 1.5px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
 }
 
-@media (max-width:1439px) {
-    .svg-curve {
-        background-size: contain;
+.info>p.date {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.info>p.date>svg {
+    height: 2ch;
+    margin-right: 3px;
+    margin-left: -3px;
+}
+
+.info>h3 {
+    margin-top: 0; 
+    margin-bottom: 0;
+    font-size: 25px;
+    max-height: 2.1ch;
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        height: 375px;
+    }
+
+    .hero>p {
+        font-size: 15px;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .hero>img {
+        margin-top: -15px;
+        height: 75px;
+    }
+
+    .articles {
+        padding: 0 10px;
     }
 }
-   

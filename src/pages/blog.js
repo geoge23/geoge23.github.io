@@ -1,6 +1,6 @@
 import React from 'react'
-import BlogPreview from '../../components/BlogPreview'
-import Header from '../../components/Header'
+import BlogPreview from '../components/BlogPreview'
+import Header from '../components/Header'
 import { graphql } from 'gatsby'
 
 function Blog({data}) {

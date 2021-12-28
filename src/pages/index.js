@@ -1,8 +1,7 @@
 import React from 'react';
-import SPLASH from '../images/splash.jpg'
 import Link from '../components/Link';
-import {SiTiktok, SiInstagram, SiUpwork} from 'react-icons/si'
-import { IconContext } from 'react-icons';
+// import {SiTiktok, SiInstagram, SiUpwork} from 'react-icons/si'
+// import { IconContext } from 'react-icons';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Header() {
@@ -29,7 +28,7 @@ export default function Header() {
                 </div>
             </div>
             <div className='col-span-6'>
-                <img src={SPLASH} alt='' className='h-screen w-full object-cover' />
+                <StaticImage src='../images/splash.jpg' alt='' className='h-screen w-full object-cover' />
             </div>
         </div>
     )

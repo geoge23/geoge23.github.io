@@ -18,6 +18,13 @@ module.exports = {
         path: `${__dirname}/otherPages`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'portfolio',
+        path: `${__dirname}/portfolio`
+      }
+    },
     'gatsby-plugin-mdx',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',

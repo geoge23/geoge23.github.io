@@ -39,7 +39,7 @@ function Page({data}) {
                     <p className='mb-3 text-lg'>{data.mdx.frontmatter.technologies.join(', ')}</p>
                 </div>
                 <div className='flex items-center justify-center'>
-                    <Link to='/portfolio' className='text-blue-500 mr-3 underline'>Back</Link>
+                    {/* <Link to='/portfolio' className='text-blue-500 mr-3 underline'>Back</Link> */}
                     <button className='border-2 border-blue-800 hover:border-blue-500 hover:bg-transparent hover:text-gray-700 px-2 rounded-lg text-white bg-blue-800 transition' onClick={() => navigate(data.mdx.frontmatter.url)}>Visit<span className='md:inline hidden'> Project</span></button>
                 </div>
             </div>

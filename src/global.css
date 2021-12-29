@@ -19,3 +19,11 @@
 .markdown-body {
     font-family: 'Lato' !important;
 }
+
+.markdown-body>ul {
+    list-style: square !important;
+}
+
+.markdown-body>ol {
+    list-style: decimal !important;
+}

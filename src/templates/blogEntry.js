@@ -12,7 +12,7 @@ function Post({data, ...other}) {
             <p className='font-medium text-4xl mb-1'>{data.mdx.frontmatter.title}</p>
             <p className='text-lg mb-2'>{data.mdx.frontmatter.date}</p>
             <div className='mb-3'>
-              <Share url={window.location.toString()}/>
+              <Share url={typeof window !== 'undefined' ? window.location.toString() : ''}/>
             </div>
             <div className='markdown-body'>
                 <MDXRenderer>

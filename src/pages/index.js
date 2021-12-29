@@ -3,10 +3,14 @@ import Link from '../components/Link';
 // import {SiTiktok, SiInstagram, SiUpwork} from 'react-icons/si'
 // import { IconContext } from 'react-icons';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Helmet } from 'react-helmet';
 
-export default function Header() {
+export default function Index() {
     return (
         <div className='h-screen w-screen grid grid-cols-10'>
+            <Helmet>
+                <title>george parks</title>
+            </Helmet>
             <div className='md:col-span-4 col-span-10 flex h-full w-full justify-center items-center'>
                 <div>
                     <StaticImage src='../images/gcs.png' alt='GCS logo' className='h-28 w-28'/>

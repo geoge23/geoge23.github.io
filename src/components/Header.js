@@ -15,7 +15,7 @@ export default function Header() {
             <StaticImage src='../images/gcs.png' className='h-14 w-14' alt=''/>
             <p className='ml-3 font-medium text-2xl lowercase'>George Parks</p>
         </div>
-        <div className='ml-3'>
+        <div className='ml-3 md:mt-0 mt-2'>
             <Link url='/resume'>Resume</Link>
             <Link url='/portfolio'>Portfolio</Link>
             <Link url='/contact'>Contact</Link>

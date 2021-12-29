@@ -3,11 +3,15 @@ import Header from '../components/Header'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql } from 'gatsby'
 import 'github-markdown-css/github-markdown-light.css'
+import { Helmet } from 'react-helmet'
 
 function Page({data}) {
     console.log(data)
     return <>
         <Header />
+        <Helmet>
+            <title>george parks | {data.mdx.frontmatter.title}</title>
+        </Helmet>
         <main className='responsive-body'>
             <div className='markdown-body w-full'>    
                 <MDXRenderer>
@@ -23,7 +27,6 @@ export const query = graphql`
         mdx(id: {eq: $id}) {
         body
         frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
         }
         }

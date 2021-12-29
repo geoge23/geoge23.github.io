@@ -2,10 +2,14 @@ import React from 'react'
 import Header from '../components/Header'
 import { graphql } from 'gatsby'
 import PortfolioElement from '../components/PortfolioElement'
+import { Helmet } from 'react-helmet'
 
 function Portfolio({data}) {
     return <>
         <Header />
+        <Helmet>
+            <title>george parks | portfolio</title>
+        </Helmet>
         <main className='responsive-body'>
             <p className='text-2xl'>My Portfolio</p>
             <p className='mb-5'>Here's some of the best projects I've worked on in the past. Have a look around!</p>

@@ -25,10 +25,19 @@ module.exports = {
         path: `${__dirname}/portfolio`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/images`
+      }
+    },
     'gatsby-plugin-mdx',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap'
   ],
 };

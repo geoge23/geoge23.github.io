@@ -7,6 +7,7 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { Helmet } from 'react-helmet'
 
 const sliderSettings = {
     dots: true,
@@ -23,9 +24,14 @@ function Page({data}) {
     console.log(data)
     return <>
         <Header />
+        <Helmet>
+            <title>{data.mdx.frontmatter.name} | george parks</title>
+            <meta name="description" content={data.mdx.excerpt} />
+            <meta property='og:image' content={data.mdx.icon.childImageSharp.fixed.src} />
+        </Helmet>
         <main className='responsive-body'>
             <Slider {...sliderSettings} className='md:w-9/12 w-full mx-auto md:mb-4 mb-8'>
-                {data.mdx.frontmatter.images.map(({childImageSharp: e}) => <GatsbyImage className='h-80 object-cover' image={e.gatsbyImageData} />)}
+                {data.mdx.frontmatter.images.map(({childImageSharp: e}) => <GatsbyImage className='h-80' objectFit="contain" image={e.gatsbyImageData} />)}
             </Slider>
             <div className='flex justify-between w-full'>
                 <div>
@@ -50,9 +56,17 @@ export const query = graphql`
     query ($id: String) {
         mdx(id: {eq: $id}) {
         body
+        excerpt(pruneLength:200)
         frontmatter {
             name
             url
+            icon {
+                childImageSharp {
+                    fixed {
+                        src
+                    }
+                }
+            }
             technologies
             images {
                 childImageSharp {

@@ -2,10 +2,14 @@ import React from 'react'
 import BlogPreview from '../components/BlogPreview'
 import Header from '../components/Header'
 import { graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 function Blog({data}) {
     return <>
         <Header />
+        <Helmet>
+            <title>george parks | blog</title>
+        </Helmet>
         <main className='responsive-body'>
             <p className='text-2xl mb-5'>Blog Posts</p>
             <div>

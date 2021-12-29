@@ -10,7 +10,6 @@ export default function PortfolioElement({frontmatter, slug}) {
             <p className='text-xl'>{frontmatter.name}</p>
             <p>{frontmatter.shortDesc}</p>
             <Link to={`/portfolio/${slug}`} className='underline text-blue-500'>See Details</Link>
-            <p className='text-gray-500 text-sm'>Uses {frontmatter.technologies.join(', ')}</p>
         </div>
     </article>
 }

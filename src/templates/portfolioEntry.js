@@ -27,7 +27,7 @@ function Page({data}) {
         <Helmet>
             <title>{data.mdx.frontmatter.name} | george parks</title>
             <meta name="description" content={data.mdx.excerpt} />
-            <meta property='og:image' content={data.mdx.icon.childImageSharp.fixed.src} />
+            <meta property='og:image' content={data.mdx.frontmatter.icon.childImageSharp.fixed.src} />
         </Helmet>
         <main className='responsive-body'>
             <Slider {...sliderSettings} className='md:w-9/12 w-full mx-auto md:mb-4 mb-8'>

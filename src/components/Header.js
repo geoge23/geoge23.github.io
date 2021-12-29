@@ -4,7 +4,7 @@ import React from 'react'
 import Link from './Link'
 
 export default function Header() {
-    return <header className='flex m-6 items-center justify-between'>
+    return <header className='flex flex-col md:flex-row m-6 items-center justify-between'>
         <div 
             className='flex items-center cursor-pointer' 
             onClick={() => navigate('/')} 

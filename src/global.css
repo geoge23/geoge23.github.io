@@ -11,7 +11,9 @@
 .responsive-body {
     margin-left: auto;
     margin-right: auto;
+    padding: 0 3vw;
     max-width: 900px;
+    margin-bottom: 20px;
 }
 
 .markdown-body {

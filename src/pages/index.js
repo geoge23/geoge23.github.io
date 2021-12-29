@@ -7,7 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 export default function Header() {
     return (
         <div className='h-screen w-screen grid grid-cols-10'>
-            <div className='col-span-4 flex h-full w-full justify-center items-center'>
+            <div className='md:col-span-4 col-span-10 flex h-full w-full justify-center items-center'>
                 <div>
                     <StaticImage src='../images/gcs.png' alt='GCS logo' className='h-28 w-28'/>
                     <p className='font-semibold text-4xl mt-3'>George Parks</p>
@@ -27,7 +27,7 @@ export default function Header() {
                     </div> */}
                 </div>
             </div>
-            <div className='col-span-6'>
+            <div className='md:col-span-6 md:block hidden'>
                 <StaticImage src='../images/splash.jpg' alt='' className='h-screen w-full object-cover' />
             </div>
         </div>

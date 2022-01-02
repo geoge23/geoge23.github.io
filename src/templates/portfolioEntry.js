@@ -21,7 +21,6 @@ const sliderSettings = {
 };
 
 function Page({data}) {
-    console.log(data)
     return <>
         <Header />
         <Helmet>

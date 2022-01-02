@@ -6,7 +6,6 @@ import 'github-markdown-css/github-markdown-light.css'
 import { Helmet } from 'react-helmet'
 
 function Page({data}) {
-    console.log(data)
     return <>
         <Header />
         <Helmet>

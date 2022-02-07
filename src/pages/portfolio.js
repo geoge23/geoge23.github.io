@@ -29,7 +29,7 @@ export const query = graphql`
                   shortDesc
                   icon {
                     childImageSharp {
-                        gatsbyImageData
+                        gatsbyImageData(width: 70, height: 70)
                     }
                   }
                   url

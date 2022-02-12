@@ -51,5 +51,18 @@ module.exports = {
         icon: 'src/images/gcs.png'
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-HR1S3Q0Y9L"
+        ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
+    },
   ],
 };

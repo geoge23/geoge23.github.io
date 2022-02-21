@@ -21,7 +21,10 @@ function Blog({data}) {
 
 export const query = graphql`
   {
-    allFile(filter: {sourceInstanceName: {eq: "posts"}}) {
+    allFile(
+        filter: {sourceInstanceName: {eq: "posts"}}
+        sort: {fields: childrenMdx___frontmatter___date, order: DESC}
+        ) {
         nodes {
             childMdx {
                 id

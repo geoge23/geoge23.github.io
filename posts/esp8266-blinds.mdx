@@ -1,0 +1,31 @@
+---
+title: Automate your blinds with ESP8266!
+date: 2022-02-20
+image: ../images/bedroom-with-blinds.jpeg
+articleImages:
+    - '../images/blinds-diagram.png'
+    - '../images/angle-bracket-holding-motor.jpeg'
+    - '../images/other-end-of-pulley.jpeg'
+    - '../images/belt-clip.png'
+    - '../images/esp8266-for-window.jpeg'
+---
+import BlogImage from '../src/components/BlogImage.js';
+import Slider from 'react-slick';
+
+For the last few years, I've been on the quest to create the most futuristic bedroom automation can make. However, this goal is extremely difficult when operating on the budget of a high-schooler, meaning that I sometimes have to get creative in how I implement my smart home tech. One of the projects that has been on my bucket list is a set of motorized curtains, inspired by my inability to have the cool electrochromic windows from [that scene in Iron Man.](https://www.youtube.com/watch?v=sXH2K2ZlrjQ) Since I couldn't afford any of the commercial solutions, I resorted to my own homebrew technology and built this device. Here's a quick rundown of how I used the ESP8266 SOC coupled with some creative designing and the extremely powerful ESPHome software to create motorized blinds for my bedroom.
+
+When drawing up my plans for this project, I designed it to use components that either I already had or that were easy to get. In order to move the blinds in opposite directions as they open, I used a timing belt intended for a 3D printer coupled with a stepper motor. This allowed me to attach one blind to one side of the timing belt loop and the other to the opposite side, meaning that the curtains would open in opposite directions as the belt is rotated. 
+<BlogImage src={props.articleImages[0]} caption="A crude diagram of my proposed system" />
+
+Now that the operational premise was laid out, I got to work determining where the parts were going to be mounted to attach to my curtain rod. I created an [angle bracket](https://www.thingiverse.com/thing:5256113) in Fusion 360 that will eventually hold my stepper motor to the wall next to my curtains. I also fabricated a small pulley holder to hold a stepper motor tooth piece for the timing belt using some spare components. Finally, I crafted some clips to hold the curtain edges to the belt. With some drilling work, the parts were attached like in the gallery below. 
+<Slider {...props.sliderSettings} className='md:w-9/12 w-full mx-auto md:mb-4 mb-8'>
+    <BlogImage src={props.articleImages[1]} caption="The angle bracket holding my motor in place" />
+    <BlogImage src={props.articleImages[2]} caption="The other end of the pulley" />
+    <BlogImage src={props.articleImages[3]} caption="The clip to hold the curtains to the belt" />
+</Slider>
+
+Now that the hardware was attached, I connected my stepper motor to an ESP8266, which I flashed with ESPHome. Using the web editor, I wrote [this](https://gist.github.com/geoge23/5632dd1735948e40376c8befd5bd5740) config, which allows the stepper to appear as a curtain entity within Home Assistant. With this firmware being flashed, all I had to do is secure the connectors to curtains of my choice, which I did by using small pieces of string looped through the hook on the connector and the ring of the curtains. I placed my breadboarded ESP8266 in the ridge of the window, where it can be obscured by the end of the curtains. Also seen attached is a DHT11 sensor which I use to monitor humidity in my bedroom.
+<BlogImage src={props.articleImages[4]} caption="ESP8266 connected to the stepper motor" />
+
+With the ESP8266 connected to ESPHome, the system is now complete! Since my Home Assistant instance is configured to communicate with Alexa, I can now use my voice to open my blinds-- How cool is that?! Below is a video of the final working edition of my curtains. 
+<iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/so0aNG4tH4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

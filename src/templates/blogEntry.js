@@ -6,6 +6,17 @@ import 'github-markdown-css/github-markdown-light.css'
 import Share from '../components/Share'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableHeight: true,
+};
 
 function Post({data}) {
     return <>
@@ -23,7 +34,7 @@ function Post({data}) {
               <Share url={typeof window !== 'undefined' ? window.location.toString() : ''}/>
             </div>
             <div className='markdown-body'>
-                <MDXRenderer>
+                <MDXRenderer articleImages={data.mdx.frontmatter.articleImages} sliderSettings={sliderSettings}>
                     {data.mdx.body}
                 </MDXRenderer>
             </div>
@@ -42,6 +53,11 @@ export const query = graphql`
       body
       excerpt(pruneLength: 200)
       frontmatter {
+        articleImages {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         date(formatString: "MMMM DD, YYYY")
         title
         image {

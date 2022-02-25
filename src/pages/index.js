@@ -10,12 +10,14 @@ export default function Index() {
         <div className='h-screen w-screen grid grid-cols-10'>
             <Helmet>
                 <title>george parks</title>
+                <meta name="description" content="The homepage for George Parks, a software engineer in Atlanta, GA"></meta>
+                <meta name="author" content="George Parks"></meta>
             </Helmet>
             <div className='md:col-span-4 col-span-10 flex h-full w-full justify-center items-center'>
                 <div>
                     <StaticImage src='../images/gcs.png' alt='GCS logo' className='h-28 w-28'/>
                     <p className='font-semibold text-4xl mt-3'>George Parks</p>
-                    <p className='text-xl mt-1 font-light'>Software designer in Atlanta, GA</p>
+                    <p className='text-xl mt-1 font-light'>Software engineer in Atlanta, GA</p>
                     <div className='flex flex-col'>
                         <Link url='/resume'>Resume</Link>
                         <Link url='/portfolio'>Portfolio</Link>

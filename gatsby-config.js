@@ -38,7 +38,22 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        serialize: (e) => {
+          //fixes problem where gh pages redirects dirs without a / to dirs with a /
+          const len = e.path.length
+          if (e.path.substring(len - 1, len) != "/") {
+            e.path += "/"
+          }
+          console.log(e)
+          return {
+            url: e.path
+          }
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -33,7 +33,7 @@ function Post({data}) {
             <div className='mb-3'>
               <Share url={typeof window !== 'undefined' ? window.location.toString() : ''}/>
             </div>
-            <div className='markdown-body'>
+            <div className='markdown-body overflow-x-hidden'>
                 <MDXRenderer articleImages={data.mdx.frontmatter.articleImages} sliderSettings={sliderSettings}>
                     {data.mdx.body}
                 </MDXRenderer>

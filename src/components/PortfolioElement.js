@@ -9,7 +9,10 @@ export default function PortfolioElement({frontmatter, slug}) {
         <div>
             <p className='text-xl'>{frontmatter.name}</p>
             <p>{frontmatter.shortDesc}</p>
-            <Link to={`/portfolio/${slug}`} className='underline text-blue-500'>See Details</Link>
+            <div className='flex items-center'>
+                <p className='text-sm tracking-widest'>{frontmatter.type}</p>
+                <Link to={`/portfolio/${slug}`} className='underline text-blue-500 ml-2'>See Details</Link>
+            </div>
         </div>
     </article>
 }

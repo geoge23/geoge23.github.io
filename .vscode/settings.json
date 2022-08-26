@@ -2,5 +2,6 @@
     "cSpell.enabled": true,
     "cSpell.enableFiletypes": [
         "mdx"
-    ]
+    ],
+    "cSpell.language": "en,en-US"
 }

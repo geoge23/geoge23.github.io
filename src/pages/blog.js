@@ -11,7 +11,7 @@ function Blog({data}) {
             <title>george parks | blog</title>
         </Helmet>
         <main className='responsive-body'>
-            <p className='text-2xl mb-5'>Blog Posts</p>
+            <p className='text-2xl mb-5 font-semibold'>Blog Posts</p>
             <div>
                 {data.allFile.nodes.map(({childMdx}) => <BlogPreview key={childMdx.id} {...childMdx} />)}
             </div>

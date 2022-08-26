@@ -1,0 +1,53 @@
+---
+name: Project Connected Home
+shortDesc: A continuing experiment to develop an integrated smart home using both self-made technology and off-the-shelf software and components.
+icon: ../images/pch-logo.png
+type: personal project
+images: 
+    - ../images/pch-1.jpeg
+    - ../images/pch-2.jpeg
+    - ../images/pch-3.jpeg
+technologies:
+    - Embedded Systems
+    - Home Assistant
+    - MQTT
+    - Zigbee
+    - ESP8266
+articleImages:
+    - ../images/bedroom-with-blinds.jpeg
+    - ../images/pch-projector.jpeg
+    - ../images/pch-workout.jpeg
+---
+import BlogImage from '../src/components/BlogImage.js';
+
+Project Connected Home is a catch-all for my projects to automate various tasks throughout my home. I've listed a few highlights below
+
+#### Robo-curtains
+The flashiest of my projects, I constructed curtains that can open and close via the internet. They run off of an ESP8266 and some circuitry I threw together
+to control an old 3D printer's stepper motor. It communicates with Home Assistant (the home automation platform I use) via ESPHome over WiFi. You can read more about this system
+in the blog post found [here](https://georgeparks.me/blog/esp8266-blinds)
+<BlogImage src={props.articleImages[0]} caption="The curtains above my bed" />
+
+#### My Current State
+My automation strategy is centered around an attribute I call `My Current State`. I keep track of when I'm either sleeping, at home, or away via 
+this attribute, which I can use to trigger actions accordingly. Away and Home states are currently detected by the GPS location of my iPhone, but I plan
+to transition this to some home-rolled BLE sensors that will be able to tell whether or not I'm at home as well as in my room via the Bluetooth beacon from the AirTag on my keys.
+
+#### Workout Tracker
+In an effort to make me more motivated to workout, I threw together a camera to take pictures of my progress and tie into my already existing workout tracking system. It runs Linux and a 
+Python script to take pictures and upload them to Google Photos when the button is pressed. 
+<BlogImage src={props.articleImages[2]} caption="The workout tracker with it's enclosure and attached camera" />
+
+#### Smart Speakers
+I use Amazon Alexas throughout my room to control music and respond to commands. Alexa can't talk to my Home Assistant instance natively, since HA runs locally and there isn't a skill for 
+connecting it. However, I was able to use some open-source software and my AWS Student credits to run a Lambda function that forwards Alexa Smart Home requests down to my server where they can
+be processed. I use one Echo Spot near my bed to respond to home requests, and one old Echo Dot that I wired into a salvaged amp to control the speakers that came built into my bedroom ceiling. 
+
+#### Entertainment
+Since I'm on a pretty tight budget, I can't afford a smart TV with wireless control. As such, I purchased and integrated a Broadlink IR controller, which I use to control a hand-me-down TV from my parents.
+I keep track of it's state by monitoring the attached Chromecast and checking whether it's "displaying," which can tell me if the TV has been turned on or off outside of the automation platform. I also have 
+an old projector that I built onto a small table along with a speaker and Fire TV stick, which I can aim towards a blank wall and watch movies in bed from. The Fire TV onboard detects when video is playing and
+automatically dims lights to allow for the best viewing experience. 
+<BlogImage src={props.articleImages[1]} caption="Lights automatically dim when I plug in the projector" />
+
+There's even more that I didn't mention here, along with new stuff always on the way! I'll update this page as I develop new things. 

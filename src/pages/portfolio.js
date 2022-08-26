@@ -12,7 +12,7 @@ function Portfolio({data}) {
             <meta name='description' content={"Projects by George Parks, a software developer in Atlanta, GA"} />
         </Helmet>
         <main className='responsive-body'>
-            <p className='text-2xl'>My Portfolio</p>
+            <p className='text-2xl font-semibold'>My Portfolio</p>
             <p className='mb-5'>Here's some of the projects I've worked on in the past. Have a look around!</p>
             {data.allFile.nodes.map(({childMdx, id}) => <PortfolioElement key={id} {...childMdx} />)}
         </main>

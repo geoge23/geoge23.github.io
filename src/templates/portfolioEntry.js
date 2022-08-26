@@ -42,7 +42,7 @@ function Page({data}) {
                 </div>
             </div>
             <div className='markdown-body w-full'>
-                <MDXRenderer>
+                <MDXRenderer articleImages={data.mdx.frontmatter.articleImages}>
                     {data.mdx.body}
                 </MDXRenderer>
             </div>
@@ -63,6 +63,11 @@ export const query = graphql`
                     fixed {
                         src
                     }
+                }
+            }
+            articleImages {
+                childImageSharp {
+                    gatsbyImageData
                 }
             }
             technologies

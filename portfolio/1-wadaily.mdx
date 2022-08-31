@@ -15,13 +15,13 @@ technologies:
     - Docker
 ---
 
-WADaily is a website that solves a suprisingly difficult problem: What schedule is it today? Our school makes use of a complicated revolving schedule, meaning the order
+WADaily is a website that solves a surprisingly difficult problem: What schedule is it today? Our school makes use of a complicated revolving schedule, meaning the order
 of classes varies seemingly randomly each day. This website primarily allows students to check the current schedule, along with a few other features. For instance, it
 displays updated weather information, a school calendar, and the lunch menu for the day.
 
 Under the hood, this service is built in NextJS, using their Incremental Static Regeneration feature to avoid rendering identical pages multiple times for users. 
 It also exposes a public API allowing other developers to access daily information. The frontend is written in React with TailwindCSS.
-Schedule information is stored in MongoDB due to its unstructured nature, and an internal tool allows for the addition of schedule information by members of the maintenence team. 
+Schedule information is stored in MongoDB due to its unstructured nature, and an internal tool allows for the addition of schedule information by members of the maintenance team. 
 Other information, such as lunch or calendar info, is accessed via various APIs provided by the school. This backend service is deployed to a Docker environment on my private 
 server automatically using a Github Actions-based CI/CD pipeline.
 

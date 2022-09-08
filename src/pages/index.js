@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '../components/Link';
-// import {SiTiktok, SiInstagram, SiUpwork} from 'react-icons/si'
-// import { IconContext } from 'react-icons';
+import {SiLinkedin, SiGithub, SiUpwork} from 'react-icons/si'
+import { IconContext } from 'react-icons';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
 
@@ -24,13 +24,13 @@ export default function Index() {
                         <Link url='/contact'>Contact</Link>
                         <Link url='/blog'>Blog</Link>
                     </div>
-                    {/* <div className='flex mt-4'>
+                    <div className='flex mt-4'>
                         <IconContext.Provider value={{ size: '18px', style: { marginRight: '10px', color: "grey" } }}>
-                            <SiTiktok />
-                            <SiInstagram />
-                            <SiUpwork />
+                            <a href='https://www.linkedin.com/in/george-parks/'><SiLinkedin /></a>
+                            <a href='https://github.com/geoge23'><SiGithub /></a>
+                            <a href='https://www.upwork.com/freelancers/~01722f50762199c085'><SiUpwork /></a>
                         </IconContext.Provider>
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <div className='md:col-span-6 md:block hidden'>

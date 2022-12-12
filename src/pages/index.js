@@ -17,7 +17,7 @@ export default function Index() {
                 <div>
                     <StaticImage src='../images/gcs.png' alt='GCS logo' className='h-28 w-28'/>
                     <p className='font-semibold text-4xl mt-3'>George Parks</p>
-                    <p className='text-xl mt-1 font-light'>Software engineer in Atlanta, GA</p>
+                    <p className='md:text-2xl text-xl mt-1 font-light'>Software engineer in Atlanta, GA</p>
                     <div className='flex flex-col'>
                         <Link url='/resume'>Resume</Link>
                         <Link url='/portfolio'>Portfolio</Link>
@@ -25,7 +25,7 @@ export default function Index() {
                         <Link url='/blog'>Blog</Link>
                     </div>
                     <div className='flex mt-4'>
-                        <IconContext.Provider value={{ size: '18px', style: { marginRight: '10px', color: "grey" } }}>
+                        <IconContext.Provider value={{ size: '21px', style: { marginRight: '10px', color: "grey" } }}>
                             <a href='https://www.linkedin.com/in/george-parks/'><SiLinkedin /></a>
                             <a href='https://github.com/geoge23'><SiGithub /></a>
                             <a href='https://www.upwork.com/freelancers/~01722f50762199c085'><SiUpwork /></a>
@@ -33,8 +33,8 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-            <div className='md:col-span-6 md:block hidden'>
-                <StaticImage src='../images/splash.jpg' alt='' className='h-screen w-full object-cover' />
+            <div className='md:col-span-6 md:flex hidden justify-center items-center'>
+                <StaticImage src='../images/splash.jpg' alt='' style={{width: "700px", maxHeight: "90vh"}} className="shadow-lg rounded-lg" />
             </div>
         </div>
     )

@@ -3,5 +3,8 @@
     "cSpell.enableFiletypes": [
         "mdx"
     ],
-    "cSpell.language": "en,en-US"
+    "cSpell.language": "en,en-US",
+    "files.associations": {
+        "*.yaml": "home-assistant"
+    }
 }

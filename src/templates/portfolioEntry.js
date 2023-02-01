@@ -29,6 +29,7 @@ function Page({data}) {
             <meta property='og:image' content={data.mdx.images && data.mdx.images[0] ? data.mdx.images[0].childImageSharp.fixed.src  : data.mdx.frontmatter.icon.childImageSharp.fixed.src} />
             <meta property='og:title' content={data.mdx.frontmatter.name} />
             <meta property='og:description' content={data.mdx.excerpt} />
+            <meta property='og:url' content={data.site.siteMetadata.siteUrl + "/portfolio/" + data.mdx.slug} />
             <meta property='og:type' content='article' />
             <meta property='og:site_name' content='george parks' />
             <meta property='og:locale' content='en_US' />
@@ -63,31 +64,37 @@ function Page({data}) {
 
 export const query = graphql`
     query ($id: String) {
+        site {
+            siteMetadata {
+              siteUrl
+            }
+          }
         mdx(id: {eq: $id}) {
-        body
-        excerpt(pruneLength:200)
-        frontmatter {
-            name
-            url
-            icon {
-                childImageSharp {
-                    fixed {
-                        src
+            slug
+            body
+            excerpt(pruneLength:200)
+            frontmatter {
+                name
+                url
+                icon {
+                    childImageSharp {
+                        fixed {
+                            src
+                        }
+                    }
+                }
+                articleImages {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
+                technologies
+                images {
+                    childImageSharp {
+                        gatsbyImageData
                     }
                 }
             }
-            articleImages {
-                childImageSharp {
-                    gatsbyImageData
-                }
-            }
-            technologies
-            images {
-                childImageSharp {
-                    gatsbyImageData
-                }
-            }
-        }
         }
     }
   `

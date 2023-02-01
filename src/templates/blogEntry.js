@@ -28,6 +28,7 @@ function Post({data}) {
           <meta property='og:title' content={data.mdx.frontmatter.title} />
           <meta property='og:description' content={data.mdx.excerpt} />
           <meta property='og:type' content='article' />
+          <meta property='og:url' content={data.site.siteMetadata.siteUrl + "/blog/" + data.mdx.slug} />
           <meta property='og:site_name' content='george parks' />
           <meta property='article:author' content='George Parks' />
           <meta property='og:locale' content='en_US' />
@@ -35,7 +36,7 @@ function Post({data}) {
           <meta property='article:tag' content={data.mdx.frontmatter.tags} />
           <meta property='article:published_time' content={data.mdx.frontmatter.date} />
           <meta property='article:modified_time' content={data.mdx.frontmatter.date} />
-          <meta property="keywords" content={data.mdx.frontmatter.tags + ', george, george parks, freelance, atlanta, atlanta ga, software engineering'} />
+          <meta property="keywords" content={data.mdx.frontmatter.tags.join(', ') + ', george, george parks, freelance, atlanta, atlanta ga, software engineering'} />
         </Helmet>
         <main className='responsive-body'>
             <GatsbyImage image={data.mdx.frontmatter.image.childImageSharp.gatsbyImageData} className='h-52 w-full mb-4 object-cover' alt={data.mdx.frontmatter.title} />
@@ -63,12 +64,14 @@ export const query = graphql`
     mdx(id: {eq: $id}) {
       body
       excerpt(pruneLength: 200)
+      slug
       frontmatter {
         articleImages {
           childImageSharp {
             gatsbyImageData
           }
         }
+        tags
         date(formatString: "MMMM DD, YYYY")
         title
         image {

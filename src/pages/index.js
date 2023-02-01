@@ -10,7 +10,8 @@ export default function Index() {
         <div className='h-screen w-screen grid grid-cols-10'>
             <Helmet>
                 <title>george parks</title>
-                <meta name="description" content="The homepage for George Parks, a software engineer in Atlanta, GA"></meta>
+                <meta name="description" content="George Parks is a software engineer based in Atlanta, GA. With extensive experience in dynamic and group-oriented technological development, he has a proven track record of delivering innovative software solutions."></meta>
+                <meta name="keywords" content="george parks, george, parks, software, engineer, atlanta, ga, georgia, resume, portfolio, contact, blog, freelance, software development, web development"></meta>
                 <meta name="author" content="George Parks"></meta>
             </Helmet>
             <div className='md:col-span-4 col-span-10 flex h-full w-full justify-center items-center'>

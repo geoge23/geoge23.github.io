@@ -25,6 +25,17 @@ function Post({data}) {
           <title>{data.mdx.frontmatter.title} | george parks</title>
           <meta name='description' content={data.mdx.excerpt} />
           <meta property='og:image' content={data.site.siteMetadata.siteUrl + data.mdx.frontmatter.image.childImageSharp.fixed.src} />
+          <meta property='og:title' content={data.mdx.frontmatter.title} />
+          <meta property='og:description' content={data.mdx.excerpt} />
+          <meta property='og:type' content='article' />
+          <meta property='og:site_name' content='george parks' />
+          <meta property='article:author' content='George Parks' />
+          <meta property='og:locale' content='en_US' />
+          <meta property='article:section' content={data.mdx.frontmatter.category} />
+          <meta property='article:tag' content={data.mdx.frontmatter.tags} />
+          <meta property='article:published_time' content={data.mdx.frontmatter.date} />
+          <meta property='article:modified_time' content={data.mdx.frontmatter.date} />
+          <meta property="keywords" content={data.mdx.frontmatter.tags + ', george, george parks, freelance, atlanta, atlanta ga, software engineering'} />
         </Helmet>
         <main className='responsive-body'>
             <GatsbyImage image={data.mdx.frontmatter.image.childImageSharp.gatsbyImageData} className='h-52 w-full mb-4 object-cover' alt={data.mdx.frontmatter.title} />

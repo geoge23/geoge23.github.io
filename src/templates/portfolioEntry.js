@@ -1,13 +1,13 @@
-import React from 'react'
-import Header from '../components/Header'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql, navigate } from 'gatsby'
-import 'github-markdown-css/github-markdown-light.css'
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import 'github-markdown-css/github-markdown-light.css'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import Header from '../components/old/Header'
 
 const sliderSettings = {
     dots: true,
@@ -20,18 +20,18 @@ const sliderSettings = {
     autoplaySpeed: 5000
 };
 
-function Page({data}) {
+function Page({ data }) {
     return <>
         <Header />
         <Helmet>
-            <title>{data.mdx.frontmatter.name} | george parks</title>
+            <title>{data.mdx.frontmatter.name} | George Parks</title>
             <meta name="description" content={data.mdx.excerpt} />
-            <meta property='og:image' content={data.mdx.images && data.mdx.images[0] ? data.mdx.images[0].childImageSharp.fixed.src  : data.mdx.frontmatter.icon.childImageSharp.fixed.src} />
+            <meta property='og:image' content={data.mdx.images && data.mdx.images[0] ? data.mdx.images[0].childImageSharp.fixed.src : data.mdx.frontmatter.icon.childImageSharp.fixed.src} />
             <meta property='og:title' content={data.mdx.frontmatter.name} />
             <meta property='og:description' content={data.mdx.excerpt} />
             <meta property='og:url' content={data.site.siteMetadata.siteUrl + "/portfolio/" + data.mdx.slug} />
             <meta property='og:type' content='article' />
-            <meta property='og:site_name' content='george parks' />
+            <meta property='og:site_name' content='George Parks' />
             <meta property='og:locale' content='en_US' />
             <meta property='article:author' content='George Parks' />
             <meta property='article:published_time' content={data.mdx.frontmatter.date} />
@@ -42,7 +42,7 @@ function Page({data}) {
         </Helmet>
         <main className='responsive-body'>
             <Slider {...sliderSettings} className='md:w-9/12 w-full mx-auto md:mb-4 mb-8'>
-                {data.mdx.frontmatter.images.map(({childImageSharp: e}) => <GatsbyImage className='h-80' objectFit="contain" image={e.gatsbyImageData} />)}
+                {data.mdx.frontmatter.images.map(({ childImageSharp: e }) => <GatsbyImage className='h-80' objectFit="contain" image={e.gatsbyImageData} />)}
             </Slider>
             <div className='flex justify-between w-full'>
                 <div>

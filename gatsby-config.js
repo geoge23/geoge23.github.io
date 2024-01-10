@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://georgeparks.me",
-    title: "george parks",
+    title: "George Parks",
   },
   plugins: [
     {
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `george parks`,
-        short_name: `george parks`,
+        name: `George Parks`,
+        short_name: `George Parks`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,

@@ -1,19 +1,19 @@
-import React from 'react'
-import BlogPreview from '../components/BlogPreview'
-import Header from '../components/Header'
 import { graphql } from 'gatsby'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import BlogPreview from '../components/old/BlogPreview'
+import Header from '../components/old/Header'
 
-function Blog({data}) {
+function Blog({ data }) {
     return <>
         <Header />
         <Helmet>
-            <title>george parks | blog</title>
+            <title>George Parks | Blog</title>
         </Helmet>
         <main className='responsive-body'>
             <p className='text-2xl mb-5 font-semibold'>Blog Posts</p>
             <div>
-                {data.allFile.nodes.map(({childMdx}) => <BlogPreview key={childMdx.id} {...childMdx} />)}
+                {data.allFile.nodes.map(({ childMdx }) => <BlogPreview key={childMdx.id} {...childMdx} />)}
             </div>
         </main>
     </>

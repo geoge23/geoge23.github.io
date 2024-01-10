@@ -1,18 +1,18 @@
-import React from 'react'
-import Header from '../components/Header'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import 'github-markdown-css/github-markdown-light.css'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import Header from '../components/old/Header'
 
-function Page({data}) {
+function Page({ data }) {
     return <>
         <Header />
         <Helmet>
-            <title>george parks | {data.mdx.frontmatter.title}</title>
+            <title>George Parks | {data.mdx.frontmatter.title}</title>
         </Helmet>
         <main className='responsive-body'>
-            <div className='markdown-body w-full'>    
+            <div className='markdown-body w-full'>
                 <MDXRenderer>
                     {data.mdx.body}
                 </MDXRenderer>

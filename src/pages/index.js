@@ -1,42 +1,58 @@
 import React from 'react';
-import Link from '../components/Link';
-import {SiLinkedin, SiGithub, SiUpwork} from 'react-icons/si'
-import { IconContext } from 'react-icons';
-import { StaticImage } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
+import GcsLogo from '../assets/gcs.svg';
+import Headline from '../components/Headline';
+import TextSection from '../components/TextSection';
 
 export default function Index() {
     return (
-        <div className='h-screen w-screen grid grid-cols-10'>
+        <>
             <Helmet>
-                <title>george parks</title>
-                <meta name="description" content="George Parks is a software engineer based in Atlanta, GA. With extensive experience in dynamic and group-oriented technological development, he has a proven track record of delivering innovative software solutions."></meta>
-                <meta name="keywords" content="george parks, george, parks, software, engineer, atlanta, ga, georgia, resume, portfolio, contact, blog, freelance, software development, web development"></meta>
+                <title>George Parks</title>
+                <meta name="description" content="George Parks is a computer science + public policy major at Georgia Tech, working at the intersection of government and novel technologies."></meta>
+                <meta name="keywords" content="george parks, george, parks, software, georgia tech, ga tech, computer science, public policy, government, student government, developer, atlanta, georgia, upwork, gtri, linkedin, github, email"></meta>
                 <meta name="author" content="George Parks"></meta>
             </Helmet>
-            <div className='md:col-span-4 col-span-10 flex h-full w-full justify-center items-center'>
-                <div>
-                    <StaticImage src='../images/gcs.png' alt='GCS logo' className='h-28 w-28'/>
-                    <p className='font-semibold text-4xl mt-3'>George Parks</p>
-                    <p className='md:text-2xl text-xl mt-1 font-light'>Software engineer in Atlanta, GA</p>
-                    <div className='flex flex-col'>
-                        <Link url='/resume'>Resume</Link>
-                        <Link url='/portfolio'>Portfolio</Link>
-                        <Link url='/contact'>Contact</Link>
-                        <Link url='/blog'>Blog</Link>
-                    </div>
-                    <div className='flex mt-4'>
-                        <IconContext.Provider value={{ size: '21px', style: { marginRight: '10px', color: "grey" } }}>
-                            <a href='https://www.linkedin.com/in/george-parks/'><SiLinkedin /></a>
-                            <a href='https://github.com/geoge23'><SiGithub /></a>
-                            <a href='https://www.upwork.com/freelancers/~01722f50762199c085'><SiUpwork /></a>
-                        </IconContext.Provider>
-                    </div>
-                </div>
-            </div>
-            <div className='md:col-span-6 md:flex hidden justify-center items-center'>
-                <StaticImage src='../images/splash.jpg' alt='' style={{width: "700px", maxHeight: "90vh"}} className="shadow-lg rounded-lg" />
-            </div>
-        </div>
+            <main className="max-w-[800px] md:p-0 p-10 mx-auto md:mb-32 mb-10 homepage-main">
+                <section className='md:mt-28 mt-16'>
+                    <img src={GcsLogo} className='aspect-square h-24' alt="GCS Logo" />
+                    <h1 className='text-[2.5rem] md:max-w-none max-w-64 leading-10 mt-2 -mb-2'>Hey, I&apos;m George Parks</h1>
+                    <p className='text-3xl mt-3'>A computer scientist + public policy advocate</p>
+                    <hr className='border-black md:w-96 w-1/3 mt-8'></hr>
+                </section>
+                <TextSection className='mt-16'>
+                    I’m a sophomore computer science + public policy major at <a href="https://gatech.edu">Georgia Tech</a>, working at the intersection of government and novel
+                    technologies.
+                </TextSection>
+                <TextSection>
+                    I'm currently managing technology and media for a <a href="https://gosam.org">Georgia State House campaign</a>, and I'm developing
+                    a <a href="http://paragonfellowship.org">fellowship</a> to increase student involvement in local technology policy.
+                </TextSection>
+                <TextSection>
+                    I'm also the team lead on a Georgia Tech SGA development project to improve the queueing experience
+                    for students at career fairs and other large events.
+                </TextSection>
+                <TextSection>
+                    I previously worked as a SDE intern at <a href="https://www.gtri.gatech.edu/laboratories/electro-optical-systems-laboratory">GTRI</a>,
+                    as well as a Top-Rated Freelancer on <a href="https://www.upwork.com/freelancers/~01722f50762199c085">Upwork</a>.
+                    I'm also a member of the Electronic Frontier Foundation, an avid hiker, and a lifelong tinkerer and builder.
+                </TextSection>
+                <Headline>
+                    Want to get in contact?
+                </Headline>
+                <TextSection className="mt-4">
+                    Send me an email at <a href="mailto:george.parks@gatech.edu">george.parks@gatech.edu</a>
+                    <br />
+                    or call or text <a href="tel:4044878173">(404) 487 8173</a>
+                </TextSection>
+                <TextSection>
+                    You can also connect with me on <a href="https://www.linkedin.com/in/george-parks/">LinkedIn</a> or
+                    check out my <a href="https://github.com/geoge23">GitHub</a>
+                </TextSection>
+                <TextSection>
+                    For legal or business inquiries, email <a href="mailto:business@georgeparks.me">business@georgeparks.me</a>
+                </TextSection>
+            </main>
+        </>
     )
 }

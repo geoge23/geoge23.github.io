@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import GcsLogo from '../assets/gcs.svg';
 import Headline from '../components/Headline';
 import TextSection from '../components/TextSection';
 
+/**
+ * @param {HTMLDivElement} node 
+ */
+const callbackFunc = (node) => {
+    if (!node) return;
+
+    const children = node.children;
+    for (let child of children) {
+        child.style.opacity = 0;
+        child.style.transform = 'translateY(20px)';
+        child.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+    }
+
+    node.style.opacity = 1;
+
+    let time = 100;
+    for (let child of children) {
+        setTimeout(() => {
+            child.style.opacity = 1;
+            child.style.transform = 'translateY(0px)';
+        }, time);
+        time += 150;
+    }
+}
+
 export default function Index() {
+
+    const callbackRef = useCallback(callbackFunc, []);
+
     return (
         <>
             <Helmet>
@@ -13,7 +41,9 @@ export default function Index() {
                 <meta name="keywords" content="george parks, george, parks, software, georgia tech, ga tech, computer science, public policy, government, student government, developer, atlanta, georgia, upwork, gtri, linkedin, github, email"></meta>
                 <meta name="author" content="George Parks"></meta>
             </Helmet>
-            <main className="max-w-[800px] md:p-0 p-10 mx-auto md:mb-32 mb-10 homepage-main">
+            <main ref={callbackRef} className="max-w-[800px] md:p-0 p-10 mx-auto md:mb-32 mb-10 homepage-main" style={{
+                opacity: 0,
+            }}>
                 <section className='md:mt-28 mt-16'>
                     <img src={GcsLogo} className='aspect-square h-24' alt="GCS Logo" />
                     <h1 className='text-[2.5rem] md:max-w-none max-w-64 leading-10 mt-2 -mb-2'>Hey, I&apos;m George Parks</h1>

@@ -19,7 +19,7 @@ const callbackFunc = (node) => {
 
     node.style.opacity = 1;
 
-    let time = 100;
+    let time = 200;
     for (let child of children) {
         setTimeout(() => {
             child.style.opacity = 1;

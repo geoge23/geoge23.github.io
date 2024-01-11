@@ -14,13 +14,14 @@ const callbackFunc = (node) => {
     for (let child of children) {
         child.style.opacity = 0;
         child.style.transform = 'translateY(20px)';
-        child.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
     }
+
+    node.style.opacity = 1;
 
     let time = 200;
     for (let child of children) {
         setTimeout(() => {
-            node.style.opacity = 1;
+            child.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
             child.style.opacity = 1;
             child.style.transform = 'translateY(0px)';
         }, time);

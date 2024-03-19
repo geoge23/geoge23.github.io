@@ -51,21 +51,24 @@ export default function Index() {
                     <hr className='border-black md:w-96 w-1/3 mt-8'></hr>
                 </section>
                 <TextSection className='mt-16'>
-                    I’m a sophomore computer science + public policy major at <a href="https://gatech.edu">Georgia Tech</a>, working at the intersection of government and novel
+                    I’m a sophomore computer science + public policy student at <a target="_blank" href="https://gatech.edu">Georgia Tech</a>, working at the intersection of government and novel
                     technologies.
                 </TextSection>
                 <TextSection>
-                    I'm currently managing technology and media for a <a href="https://gosam.org">Georgia State House campaign</a>, and I'm developing
-                    a <a href="http://paragonfellowship.org">fellowship</a> to increase student involvement in local technology policy.
+                    I'm currently managing technology and media for a <a target="_blank" href="https://gosam.org">Georgia State House campaign</a>, and I'm developing
+                    a <a target="_blank" href="http://paragonfellowship.org">fellowship</a> to increase student involvement in local technology policy.
                 </TextSection>
                 <TextSection>
                     I'm also the team lead on a Georgia Tech SGA development project to improve the queueing experience
                     for students at career fairs and other large events.
                 </TextSection>
                 <TextSection>
-                    I previously worked as a SDE intern at <a href="https://www.gtri.gatech.edu/laboratories/electro-optical-systems-laboratory">GTRI</a>,
-                    as well as a Top-Rated Freelancer on <a href="https://www.upwork.com/freelancers/~01722f50762199c085">Upwork</a>.
+                    I previously worked as a SDE intern at <a target="_blank" href="https://www.gtri.gatech.edu/laboratories/electro-optical-systems-laboratory">GTRI</a>,
+                    as well as a Top-Rated Freelancer on <a target="_blank" href="https://www.upwork.com/freelancers/~01722f50762199c085">Upwork</a>.
                     I'm also a member of the Electronic Frontier Foundation, an avid hiker, and a lifelong tinkerer and builder.
+                </TextSection>
+                <TextSection>
+                    To see a little more about me, feel free to check out my <a target='_blank' href="/resume.pdf">resume</a>.
                 </TextSection>
                 <Headline>
                     Want to get in contact?
@@ -76,8 +79,8 @@ export default function Index() {
                     or call or text <a href="tel:4044878173">(404) 487 8173</a>
                 </TextSection>
                 <TextSection>
-                    You can also connect with me on <a href="https://www.linkedin.com/in/george-parks/">LinkedIn</a> or
-                    check out my <a href="https://github.com/geoge23">GitHub</a>
+                    You can also connect with me on <a target="_blank" href="https://www.linkedin.com/in/george-parks/">LinkedIn</a> or
+                    check out my <a target="_blank" href="https://github.com/geoge23">GitHub</a>
                 </TextSection>
                 <TextSection>
                     For legal or business inquiries, email <a href="mailto:business@georgeparks.me">business@georgeparks.me</a>

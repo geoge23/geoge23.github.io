@@ -47,29 +47,30 @@ export default function Index() {
                 <section className='md:mt-28 mt-16'>
                     <img src={GcsLogo} className='aspect-square h-24' alt="GCS Logo" />
                     <h1 className='text-[2.5rem] md:max-w-none max-w-64 leading-10 mt-2 -mb-2'>Hey, I&apos;m George Parks</h1>
-                    <p className='text-3xl mt-3'>A computer scientist + public policy advocate</p>
+                    <p className='text-3xl mt-3'>A software engineer building for government</p>
                     <hr className='border-black md:w-96 w-1/3 mt-8'></hr>
                 </section>
                 <TextSection className='mt-16'>
-                    I’m a sophomore computer science + public policy student at <a target="_blank" href="https://gatech.edu">Georgia Tech</a>, working at the intersection of government and novel
+                    I’m a computer science + public policy student at <a target="_blank" href="https://gatech.edu">Georgia Tech</a>, working at the intersection of government and novel
                     technologies.
                 </TextSection>
                 <TextSection>
-                    I'm currently managing technology and media for a <a target="_blank" href="https://gosam.org">Georgia State House campaign</a>, and I'm developing
-                    a <a target="_blank" href="http://paragonfellowship.org">fellowship</a> to increase student involvement in local technology policy.
+                    Currently, I’m streamlining situational awareness for the public sector by founding <a target="_blank" href="https://getarchon.com">Archon</a>.
                 </TextSection>
                 <TextSection>
-                    I'm also the team lead on a Georgia Tech SGA development project to improve the queueing experience
-                    for students at career fairs and other large events.
+                    I previously worked as a tech policy intern at the <a target='_blank' href="https://www.state.gov/about-us-office-of-the-science-and-technology-advisor/">State Department</a>, bringing insights on emerging technologies to senior officials.
                 </TextSection>
                 <TextSection>
-                    I previously worked as a SDE intern at <a target="_blank" href="https://www.gtri.gatech.edu/laboratories/electro-optical-systems-laboratory">GTRI</a>,
+                    I also helped build <a target="_blank" href="http://paragonfellowship.org">Paragon</a>, a fellowship to connect university students to meaningful tech policy issues in state and local government.
+                </TextSection>
+                <TextSection>
+                    Before that, I worked as a SDE intern at <a target="_blank" href="https://www.gtri.gatech.edu/laboratories/electro-optical-systems-laboratory">GTRI</a>,
                     as well as a Top-Rated Freelancer on <a target="_blank" href="https://www.upwork.com/freelancers/~01722f50762199c085">Upwork</a>.
-                    I'm also a member of the Electronic Frontier Foundation, an avid hiker, and a lifelong tinkerer and builder.
+                    I'm also a member of the Electronic Frontier Foundation, an avid hiker, and a lifelong tinkerer.
                 </TextSection>
-                <TextSection>
+                {/* <TextSection>
                     To see a little more about me, feel free to check out my <a target='_blank' href="/resume.pdf">resume</a>.
-                </TextSection>
+                </TextSection> */}
                 <Headline>
                     Want to get in contact?
                 </Headline>
@@ -81,6 +82,8 @@ export default function Index() {
                 <TextSection>
                     You can also connect with me on <a target="_blank" href="https://www.linkedin.com/in/george-parks/">LinkedIn</a> or
                     check out my <a target="_blank" href="https://github.com/geoge23">GitHub</a>
+                    <br />
+                    I'm even on <a target="_blank" href="https://twitter.com/geogeparks">X</a> occasionally
                 </TextSection>
                 <TextSection>
                     For legal or business inquiries, email <a href="mailto:business@georgeparks.me">business@georgeparks.me</a>
